@@ -26,6 +26,16 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ContactView.vue') //주석을 이용하여서 prefetch 부분 적용
+  },
+  {
+    path: '/basic',
+    name: 'Basic',
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/BasicView.vue') //주석을 이용하여서 prefetch 부분 적용
+  },
+  {
+    path: '/databinding',
+    name: 'Databinding',
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/DataBindingView.vue') //주석을 이용하여서 prefetch 부분 적용
   }
 ]
 

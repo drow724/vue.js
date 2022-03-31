@@ -53,6 +53,11 @@ const routes = [
     path: '/exampleview',
     name: 'ExampleView',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ExampleView.vue')
+  },
+  {
+    path: '/slot',
+    name: 'SlotUseModalLayout',
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/SlotUseModalLayout.vue')
   }
 ]
 

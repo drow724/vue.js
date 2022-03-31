@@ -43,7 +43,12 @@ const routes = [
     name: 'DataBindingHtml',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/DataBindingHtml.vue')
   },
-  ...example
+  ...example,
+  {
+    path: '/serverdata',
+    name: 'ServerData',
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ServerData.vue')
+  }
 ]
 
 const router = createRouter({

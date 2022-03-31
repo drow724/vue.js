@@ -1,9 +1,10 @@
 <template>
 <div>
-<button ref="child_btn" type="button" @click="childFunc">자식 클릭</button>
-<div> likes: {{likes}}</div>
-<div> isOk: {{isOk}}</div>
-<div> author: {{author.name}}</div>
+    <button ref="child_btn" type="button" @click="childFunc">자식 클릭</button>
+    <div> likes: {{likes}}</div>
+    <div> isOk: {{isOk}}</div>
+    <div> author: {{author.name}}</div>
+    <h1>{{msg}}</h1>
 </div>
 </template>
 
@@ -31,7 +32,7 @@
         },
         data() {
             return {
-                
+                msg:'자식에 있던 메시지'
             };
         },
         setup() {

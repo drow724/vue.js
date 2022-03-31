@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: 'ExampleView',
+    name: 'ExampleView2',
     components: {
 
     },

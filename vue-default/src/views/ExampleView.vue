@@ -1,20 +1,27 @@
 <template>
 <div>
-    <PageTitle title="부모 컴포너트에서 전송할 페이지 타이틀" />
+    <page-title :title="title" />
+    <child-component-view :likes="23" :isOk="true" :commentIds="[1,5,2,3]" :author="author"/>
 </div>
 </template>
 
 <script>
 import PageTitle from '../components/PageTitle';
+import ChildComponentView from './ChildComponentView';
 
     export default {
         name: 'ExampleView',
         components: {
-            PageTitle
+            'page-title':PageTitle,
+            'child-component-view':ChildComponentView
         },
         data() {
             return {
-                
+                title: '타이틀',
+                likes: 23,
+                isOk: true,
+                commentIds: [1,5,2,3],
+                author: {name:'홍길동', company:'회사이름'}
             };
         },
         setup() {

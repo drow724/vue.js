@@ -1,6 +1,7 @@
 <template>
 <div>
-    <button type="button" @click="callChildFunc">부모 클릭</button>
+    <button type="button" @click="callChildBtnFunc">부모에 클릭(자식 버튼 클릭)</button>
+    <button type="button" @click="callChildFunc">부모에 클릭(자식 함수 바로 호출)</button>
     <page-title :title="title" />
     <child-component-view :likes="23" :isOk="true" :commentIds="[1,5,2,3]" :author="author" ref="child_component"/>
 </div>
@@ -38,8 +39,11 @@ import ChildComponentView from './ChildComponentView';
         
         },
         methods: {
-            callChildFunc(){
+            callChildBtnFunc(){
                 this.$refs.child_component.$refs.child_btn.click();
+            },
+            callChildFunc(){
+                this.$refs.child_component.childFunc();
             }
         }
     }

@@ -13,5 +13,10 @@ export default  [
     path: '/exampleview3',
     name: 'ExampleView3',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ExampleView3.vue')
+  },
+  {
+    path: '/exampleview4',
+    name: 'ExampleView4',
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ExampleView4.vue')
   }
 ]

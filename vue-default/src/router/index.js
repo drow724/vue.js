@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import example from '../router/example.js'
 //import ContactView from '../views/ContactView.vue'
 //import AboutView from '../views/AboutView.vue'
 
@@ -42,11 +43,7 @@ const routes = [
     name: 'DataBindingHtml',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/DataBindingHtml.vue')
   },
-  {
-    path: '/exampleview',
-    name: 'ExampleView',
-    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ExampleView.vue')
-  }
+  ...example
 ]
 
 const router = createRouter({

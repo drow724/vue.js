@@ -48,6 +48,11 @@ const routes = [
     path: '/serverdata',
     name: 'ServerData',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ServerData.vue')
+  },
+  {
+    path: '/exampleview',
+    name: 'ExampleView',
+    component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ExampleView.vue')
   }
 ]
 

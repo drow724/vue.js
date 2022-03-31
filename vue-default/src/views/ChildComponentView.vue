@@ -1,6 +1,7 @@
 <template>
 <div>
-    <button ref="child_btn" type="button" @click="childFunc">자식 클릭</button>
+    <button ref="child_btn" type="button" @click="childFunc">자식에 있는 클릭(alert 함수 호출)</button>
+    <button type="button" @click="sendFromChild">자식에 있는 클릭(부모에게 영향주는 버튼)</button>
     <div> likes: {{likes}}</div>
     <div> isOk: {{isOk}}</div>
     <div> author: {{author.name}}</div>
@@ -50,6 +51,9 @@
         methods: {
             childFunc() {
                 alert("부모가 누름");
+            },
+            sendFromChild() {
+                this.$emit('send-msg', this.msg);
             }
         }
     }

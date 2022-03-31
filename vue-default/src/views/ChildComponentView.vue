@@ -1,5 +1,6 @@
 <template>
 <div>
+<button ref="child_btn" type="button" @click="childFunc">자식 클릭</button>
 <div> likes: {{likes}}</div>
 <div> isOk: {{isOk}}</div>
 <div> author: {{author.name}}</div>
@@ -46,7 +47,9 @@
         
         },
         methods: {
-        
+            childFunc() {
+                alert("부모가 누름");
+            }
         }
     }
 </script>

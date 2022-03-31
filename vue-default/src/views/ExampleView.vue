@@ -1,7 +1,8 @@
 <template>
 <div>
+    <button type="button" @click="callChildFunc">부모 클릭</button>
     <page-title :title="title" />
-    <child-component-view :likes="23" :isOk="true" :commentIds="[1,5,2,3]" :author="author"/>
+    <child-component-view :likes="23" :isOk="true" :commentIds="[1,5,2,3]" :author="author" ref="child_component"/>
 </div>
 </template>
 
@@ -37,7 +38,9 @@ import ChildComponentView from './ChildComponentView';
         
         },
         methods: {
-        
+            callChildFunc(){
+                this.$refs.child_component.$refs.child_btn.click();
+            }
         }
     }
 </script>

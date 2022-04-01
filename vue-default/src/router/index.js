@@ -63,6 +63,11 @@ const routes = [
     path: '/provide',
     name: 'ProvideInject',
     component: () => import( /* webpackPrefetch: true, webpackChunkName: "provide" */ '../views/ProvideInject.vue')
+  },
+  {
+    path: '/mixin',
+    name: 'MixinTest',
+    component: () => import( /* webpackPrefetch: true, webpackChunkName: "provide" */ '../views/MixinTest.vue')
   }
 ]
 
